@@ -24,9 +24,7 @@
 <style>
     body{
         background-color: #1A1A1A;
-        background: url(images/binding_dark.png);        
-/*        background: url(images/navbg1.jpg);*/
-/*        background-size: cover;*/
+        background: url(images/binding_dark.png);
     }
 
     .container{padding:5px;}
@@ -162,101 +160,6 @@
         .reveal-container{height: auto !important;}
     }
 
-.hovereffect {
-width:100%;
-height:100%;
-float:left;
-overflow:hidden;
-position:relative;
-text-align:center;
-cursor:default;
-}
-
-.hovereffect .overlay {
-width:100%;
-height:100%;
-position:absolute;
-overflow:hidden;
-top:0;
-left:0;
-opacity:0;
-background-color:rgba(0,0,0,0.5);
--webkit-transition:all .4s ease-in-out;
-transition:all .4s ease-in-out
-}
-
-.hovereffect img {
-display:block;
-position:relative;
--webkit-transition:all .4s linear;
-transition:all .4s linear;
-}
-
-.hovereffect h2 {
-text-transform:uppercase;
-color:#fff;
-text-align:center;
-position:relative;
-font-size:17px;
-background:rgba(0,0,0,0.6);
--webkit-transform:translatey(-100px);
--ms-transform:translatey(-100px);
-transform:translatey(-100px);
--webkit-transition:all .2s ease-in-out;
-transition:all .2s ease-in-out;
-padding:10px;
-}
-
-.hovereffect a.info {
-text-decoration:none;
-display:inline-block;
-text-transform:uppercase;
-color:#fff;
-border:1px solid #fff;
-background-color:transparent;
-opacity:0;
-filter:alpha(opacity=0);
--webkit-transition:all .2s ease-in-out;
-transition:box-shadow .2s ease-in-out;
-margin:50px 0 0;
-padding:7px 14px;
-}
-
-.hovereffect a.info:hover {
-box-shadow:0 0 5px #fff;
-}
-
-.hovereffect:hover img {
--ms-transform:scale(1.2);
--webkit-transform:scale(1.2);
-transform:scale(1.2);
-}
-
-.hovereffect:hover .overlay {
-opacity:1;
-filter:alpha(opacity=100);
-}
-
-.hovereffect:hover h2,.hovereffect:hover a.info {
-opacity:1;
-filter:alpha(opacity=100);
--ms-transform:translatey(0);
--webkit-transform:translatey(0);
-transform:translatey(0);
-}
-
-.hovereffect:hover a.info {
--webkit-transition-delay:.2s;
-transition-delay:.2s;
-}
-   
-   @media(max-width:1199px){  
-       .hovereffect a.info{margin: 30px 0;}
-    } 
-    @media(max-width:767px){
-        .hovereffect h2{font-size: 14px; padding: 5px;margin-top: 10px;}
-        .hovereffect a.info{margin: 5px 0;font-size: 12px;}
-    }
 
     
 </style>
@@ -312,7 +215,7 @@ transition-delay:.2s;
 <!-- AboutMe Sub-Navigation -->
 <div class="container sub-navigation" id="sub-navigation-aboutMe" style="display:none;">
     <ul>
-        <li><a id="biography" class="active-sub-navigation">About Me</a></li>
+        <li><a id="biography" class="active-sub-navigation">Biography</a></li>
         <li><a id="employment">Employment</a></li>
         <li><a id="references">References</a></li>
     </ul>
@@ -330,379 +233,37 @@ transition-delay:.2s;
 <!-- Projects Container -->
 <div class="container container-items" id="container-projects">
     
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="attraction">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/visualizer/visualizer1.jpg" alt="visualizer1">
-            <div class="overlay">
-                <h2>Space Invaders</h2>
-                <a class="info visualizer_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="attraction"><img class="img-responsive visualizer_open" src="images/projects/visualizer/visualizer1.jpg" alt="visualizer1"></div>
 
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 ai">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/mineSweeperQueens/mineSweeper3.jpg" alt="mineSweeper1">
-            <div class="overlay">
-                <h2>Latin Squares</h2>
-                <a class="info mineSweeper_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
     
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 ai">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/tictactoe/tictactoe1.jpg" alt="tictactoe1">
-            <div class="overlay">
-                <h2>TicTacToe</h2>
-                <a class="info tictactoe_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 ai"><img class="img-responsive mineSweeper_open" src="images/projects/mineSweeperQueens/mineSweeper3.jpg" alt="mineSweeper1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 ai"><img class="img-responsive tictactoe_open" src="images/projects/tictactoe/tictactoe1.jpg" alt="tictactoe1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 ai"><img class="img-responsive vacuum_open" src="images/projects/vacuum/vacuum1.jpg" alt="vacuum1"></div>
     
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 ai">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/vacuum/vacuum1.jpg" alt="vacuum1">
-            <div class="overlay">
-                <h2>Vacuum AI</h2>
-                <a class="info vacuum_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications"><img class="img-responsive accesszou_open" src="images/projects/accesszou/accesszou4.jpg" alt="accesszou1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications"><img class="img-responsive klapp_open" src="images/projects/klapp/klapp1.jpg" alt="klapp1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications" id="attraction-alt"><img class="img-responsive visualizer_open" src="images/projects/visualizer/visualizer1.jpg" alt="visualizer1"></div>
     
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/accesszou/accesszou4.jpg" alt="accesszou1">
-            <div class="overlay">
-                <h2>AccessZou</h2>
-                <a class="info accesszou_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 web"><img class="img-responsive 4reelz_open" src="images/projects/4reelz/4reelz1.jpg" alt="4reelz1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 web"><img class="img-responsive dn_open" src="images/projects/dn/dn1.jpg" alt="dn1"></div>
     
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/klapp/klapp1.jpg" alt="klapp1">
-            <div class="overlay">
-                <h2>Korean App</h2>
-                <a class="info klapp_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications" id="attraction-alt">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/visualizer/visualizer1.jpg" alt="visualizer1">
-            <div class="overlay">
-                <h2>Space Invaders</h2>
-                <a class="info visualizer_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 web">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/4reelz/4reelz1.jpg" alt="4reelz1">
-            <div class="overlay">
-                <h2>4Reelz</h2>
-                <a class="info 4reelz_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 web">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/dn/dn1.jpg" alt="dn1">
-            <div class="overlay">
-                <h2>Dragon Nest</h2>
-                <a class="info dn_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 systems">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/cpu/cpu1.jpg" alt="cpu1">
-            <div class="overlay">
-                <h2>Virtual CPU</h2>
-                <a class="info cpu_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 systems">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/cmodules/cmodules1.jpg" alt="cmodules1">
-            <div class="overlay">
-                <h2>C Modules</h2>
-                <a class="info cmodules_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 systems">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/fs/fs1.jpg" alt="fs1">
-            <div class="overlay">
-                <h2>File System</h2>
-                <a class="info fs_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 web">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/fidm/fidm1.jpg" alt="fidm1">
-            <div class="overlay">
-                <h2>FIDM</h2>
-                <a class="info fidm_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/projects/dim/dim1.jpg" alt="dim1">
-            <div class="overlay">
-                <h2>Dim3nsion</h2>
-                <a class="info dim_open" href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 systems"><img class="img-responsive cpu_open" src="images/projects/cpu/cpu1.jpg" alt="cpu1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 systems"><img class="img-responsive cmodules_open" src="images/projects/cmodules/cmodules1.jpg" alt="cmodules1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 systems"><img class="img-responsive fs_open" src="images/projects/fs/fs1.jpg" alt="fs1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 web"><img class="img-responsive fidm_open" src="images/projects/fidm/fidm1.jpg" alt="fidm1"></div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 applications"><img class="img-responsive dim_open" src="images/projects/dim/dim1.jpg" alt="dim1"></div>
 </div>
 
     <style>
-.hovereffect2 {
-  width: 100%;
-  height: 100%;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-  background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
-  background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
-}
 
-.hovereffect2 .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  padding: 3em;
-  text-align: left;
-}
-
-.hovereffect2 img {
-  display: block;
-  position: relative;
-  max-width: none;
-  width: calc(100% + 60px);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
-  transition: opacity 0.35s, transform 0.45s;
-  -webkit-transform: translate3d(-40px,0,0);
-  transform: translate3d(-40px,0,0);
-}
-
-.hovereffect2 h2 {
-  text-transform: uppercase;
-  color: #fff;
-  position: relative;
-  font-size: 17px;
-  background-color: transparent;
-  text-align: left;
-    padding: 0;
-    margin-top: 0;
-}
-
-.hovereffect2 .overlay:before {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
-  border: 1px solid #fff;
-  content: '';
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
-  transition: opacity 0.35s, transform 0.45s;
-  -webkit-transform: translate3d(-20px,0,0);
-  transform: translate3d(-20px,0,0);
-}
-
-.hovereffect2 a, .hovereffect2 p {
-  color: #FFF;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
-  transition: opacity 0.35s, transform 0.45s;
-  -webkit-transform: translate3d(-10px,0,0);
-  transform: translate3d(-10px,0,0);
-}
-
-.hovereffect2:hover img {
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-
-.hovereffect2:hover .overlay:before,
-.hovereffect2:hover a, .hovereffect2:hover p {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-        .minHeightCol, .minHeightCol img, .minHeightCol .overlay{max-height: 250px; border-radius: 20px;}
-        .pad0{padding: 0;}
-        .pad5{padding: 5px;}
-        .mike-desc{color: white; text-align: left; padding: 10px;}
-        @media(max-width:767px){.col-mike{margin-bottom: 40px;}}
     </style>
     
 
 <!-- AboutMe Container -->
 <div class="container container-items" id="container-aboutMe" style="display:none;">
     <div class="biography">
-        
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad5">
-        <h4 class="white">I am a Software Developer and a Full Stack Web Developer looking for work in the Seattle Area (Lynnwood). I am a Computer Science student graduated from University of Missouri-Columbia. I enjoy programming, designing, and experimenting with new things. Flexible, friendly, and look forward to developing with a fun, hard-working team!</h4>
-        </div>
-        
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad5 col-mike">
-            <div class="hovereffect">
-                <img class="img-responsive" src="images/me2.jpg" alt="mike">
-                <div class="overlay">
-                   <p class="mike-desc">Hi! My name is Mike. I am usually the healer of the party. Eating healthy, running in the park as the sun sets, building new computers from scratch, and teaching/learning code are a few of my of my favorite things.</p>
-                </div>
-            </div>
-        </div> 
-        
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pad5">
-                <h1 class="white" style="position: absolute; top: -60px;">Hobbies</h1>
-                <div class="hovereffect">
-                    <img class="img-responsive" src="images/hobbies/hobby1.jpg" alt="hobby">
-                    <div class="overlay">
-                        <h2>Veggies</h2>
-                    </div>
-                </div>
-            </div>   
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pad5">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="images/hobbies/hobby2.jpg" alt="hobby">
-                    <div class="overlay">
-                        <h2>Running</h2>
-                    </div>
-                </div>
-            </div>   
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pad5">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="images/hobbies/hobby3.jpg" alt="hobby">
-                    <div class="overlay">
-                        <h2>Building Tech</h2>
-                    </div>
-                </div>
-            </div>   
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pad5">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="images/hobbies/hobby4.jpg" alt="hobby">
-                    <div class="overlay">
-                        <h2>Coding:<br>Learning &amp; Teaching</h2>
-                    </div>
-                </div>
-            </div>   
-       
-        
-        
-        
-<!--
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                <div class="overlay">
-                    <h2></h2>
-                    <p> 
-                       Running in the park as the sun sets. I am a Vegetarian, running 8 years strong now!
-                    </p> 
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                <div class="overlay">
-                    <h2></h2>
-                    <p> 
-                     Building 
-                    </p> 
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                <div class="overlay">
-                    <h2>Nice Guy</h2>
-                    <p> 
-                       I code almost every single day. My Passion is creating. When I see tools that I create bring joy and comfort to people it makes me want to go further than ever before.
-                    </p> 
-                </div>
-            </div>
-        </div>
--->
-        
-<!--
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                    <div class="overlay">
-                        <h2>Passion</h2>
-                        <p> 
-                           I code almost every single day. My Passion is creating. When I see tools that I create bring joy and comfort to people it makes me want to go further than ever before.
-                        </p> 
-                    </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                    <div class="overlay">
-                        <h2>Dedication</h2>
-                        <p> 
-                           I am dedicated to what I do. The projects I receive in the workplace I make sure get done, even if I do need to put in the extra hours. Whatever the task is, I always give it my 100%.
-                        </p> 
-                    </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                    <div class="overlay">
-                        <h2>Determination</h2>
-                        <p> 
-                           No matter what the task is, I won't stop until it gets done! Hard work and determination is enables me to never stop, to never give up!
-                        </p> 
-                    </div>
-            </div>
-        </div>
--->
-        
-<!--
         <div class="col-md-8 col-xs-12">
             <h4 class="white">I am a Software Developer and a Full Stack Web Developer looking for work in the Seattle Area (Lynnwood). I am a Computer Science student enrolled at the University of Missouri-Columbia. I enjoy programming, designing, and experimenting with new things. Flexible, friendly, and look forward to developing with a fun, hard-working team!</h4>
-            
-            
-            
-            
-            
             
             <div class="reveal-container">
                 <div class="pre-reveal"><h2>Passion</h2></div>
@@ -718,7 +279,6 @@ transition-delay:.2s;
             </div>
         </div>
         <div class="col-md-4 col-xs-12"><img class="img-responsive" src="images/me1.jpg" alt="mike"></div>
--->
 
         
     </div>

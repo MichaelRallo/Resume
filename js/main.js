@@ -167,4 +167,33 @@ $(document).ready(function(){
         transition: 'all 0.3s'
     });
     
+    
+    
+    
+    
+        $('.reveal-container').click(function(){
+            $(this).css('background-color','darkred').css('cursor','default').css('height','230px');
+            $(this).find('.pre-reveal').fadeOut(500);
+            
+            var temp = $(this);
+            $(temp).find('.post-reveal').fadeIn(500);
+            setTimeout(function(){
+                console.log("hi");
+                
+                
+            }, 500); 
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }); 
