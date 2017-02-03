@@ -19,7 +19,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
-<body>
+<body onload="myFunction()" >
+    <div id="pageWrapper">
 <script>
     
       
@@ -288,14 +289,14 @@
         color: #F8F8F8;
         font-size: 18px;
     }
-    
+    #logo-link:hover{text-decoration: none;}
 
     
 </style>
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
-            <h1 id="logo"><span class="white">Mike</span><span class="main-color">Rallo</span></h1>
+            <h1 id="logo"><a href="http://rallomike.com/" id="logo-link"><span class="white">Mike</span><span class="main-color">Rallo</span></a></h1>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
             <!-- Main Navigation -->
@@ -596,7 +597,8 @@
         .mike-desc{color: white; text-align: left; padding: 10px;}
         @media(max-width:767px){.col-mike{margin-bottom: 40px;}}
         .reference h3{margin-top: 0; margin-bottom: 0; color: #f8f8f8;}
-    </style>
+        #pageWrapper{display: none;}
+        </style>
     
 
 <!-- AboutMe Container -->
@@ -1829,10 +1831,99 @@
         <h5>Presenation: <a href="http://prezi.com/4rcsqx4lbonb/?utm_campaign=share&utm_medium=copy&rc=ex0share" class="link-standard" target="_blank">Dim3nsion Prezi</a></h5>
     </div>
 </div>
-      
+</div>   
+<style>
+/* Center the loader */
+    #loader{display: none;}
+    #loadingText{ position: absolute;
+        position: absolute;
+        left: 50%;
+        top: 42%;
+        z-index: 1000;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -85px;
+        color:#f8f8f8; 
+        text-align: center;}
+#loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f8f8f8;
+  border-radius: 50%;
+  border-top: 16px solid crimson;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
     
-    
-    
+<div id="loader">
+<!--<h1 id="loadingText">Loading...</h1>-->
+<div id="loading"></div>
+</div>
+
+
+<script>
+var myVar;
+
+function myFunction() {
+    $('#loader').fadeIn(500);
+var readyStateCheckInterval = setInterval(function() {
+    if (document.readyState === "complete") {
+        clearInterval(readyStateCheckInterval);
+        showPage();
+    }
+}, 10);
+}
+
+function showPage() {
+
+    $('#loader').hide();
+    $('#pageWrapper').fadeIn(100);   
+
+  
+}
+</script> 
 
 </body>
 </html>
