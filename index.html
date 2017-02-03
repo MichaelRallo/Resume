@@ -3,7 +3,7 @@
 <head>
 <!-- JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
-    
+<script src="js/jssor.slider.mini.js"></script>    
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
@@ -20,7 +20,14 @@
 
 </head>
 <body>
+<script>
+    
+      
 
+    
+
+    
+</script>    
 <style>
     body{
         background-color: #1A1A1A;
@@ -28,20 +35,22 @@
 /*        background: url(images/navbg1.jpg);*/
 /*        background-size: cover;*/
     }
-
+    .no-margin{margin-left: 0; margin-right: 0;}
     .container{padding:5px;}
     .row{margin:auto;}
     .white{color:white;}
-    .main-color{color:brown;}
-    .horizontal-rule{height:1px; background-color: brown;clear: both;display: block;}
+    .gray{color:#8F8F8F;}
+    .inline{display: inline;}
+    .main-color{color:crimson;}
+    .horizontal-rule{height:1px; background-color: crimson;clear: both;display: block;}
     .center-text{text-align: center;}
     .no-padding{padding:0;}
     a:hover{cursor: pointer;}
     #slogan{margin-top: 15px; margin-bottom: 15px;}
     .item-popup-container .link-standard{color:magenta; transition: color 0.3s;}
-    .item-popup-container .link-standard:hover{color:brown;}
+    .item-popup-container .link-standard:hover{color:crimson;}
     .item-popup-container .p-link-standard{color:magenta; transition: color 0.3s; display: inline-block;margin-top: 0; margin-bottom: 0;}
-    .item-popup-container .p-link-standard:hover{color:brown; cursor: default;}
+    .item-popup-container .p-link-standard:hover{color:crimson; cursor: default;}
     
     /*Main Navigation*/
     #main-navigation{float: right;margin-top: 25px}
@@ -76,10 +85,12 @@
         -o-transition: filter .3s;
         transition: filter .3s;
     }
+/*
     .container-items>*>img:hover{
         cursor: pointer;
         filter: grayscale(20%);
     }
+*/
     
     #attraction-alt{display: none;}
 
@@ -103,7 +114,7 @@
     }
     .item-popup-container *{color:#fdfdfd;}
     .item-popup-title{font-size: 21px;}
-    .item-popup-title .fa-times{float: right; color: brown;}
+    .item-popup-title .fa-times{float: right; color: crimson;}
     .item-popup-title .fa-times:hover{color: red; cursor: pointer;}
     .item-popup-image{margin: auto;}
     .item-popup-slider-column{
@@ -134,7 +145,7 @@
     
     
 
-    .reveal-container{color:white; display: inline-block; text-align: center;background-color: brown; border-radius: 20px; max-width: 400px; margin: auto; height: 80px;width:196px;position: relative; cursor: pointer;margin-top: 20px;padding: 14px;transition: all 0.3s;vertical-align: top;}
+    .reveal-container{color:white; display: inline-block; text-align: center;background-color: crimson; border-radius: 20px; max-width: 400px; margin: auto; height: 80px;width:196px;position: relative; cursor: pointer;margin-top: 20px;padding: 14px;transition: all 0.3s;vertical-align: top;}
     .reveal-container:hover{background-color: darkred;}
     .pre-reveal h2{display: block;position: relative;margin-top: 0; margin-bottom: 0;}
     .post-reveal{display: none;position: relative;}
@@ -162,93 +173,93 @@
         .reveal-container{height: auto !important;}
     }
 
-.hovereffect {
-width:100%;
-height:100%;
-float:left;
-overflow:hidden;
-position:relative;
-text-align:center;
-cursor:default;
-}
+    .hovereffect {
+    width:100%;
+    height:100%;
+    float:left;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    cursor:default;
+    }
 
-.hovereffect .overlay {
-width:100%;
-height:100%;
-position:absolute;
-overflow:hidden;
-top:0;
-left:0;
-opacity:0;
-background-color:rgba(0,0,0,0.5);
--webkit-transition:all .4s ease-in-out;
-transition:all .4s ease-in-out
-}
+    .hovereffect .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+    top:0;
+    left:0;
+    opacity:0;
+    background-color:rgba(0,0,0,0.5);
+    -webkit-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out
+    }
 
-.hovereffect img {
-display:block;
-position:relative;
--webkit-transition:all .4s linear;
-transition:all .4s linear;
-}
+    .hovereffect img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+    }
 
-.hovereffect h2 {
-text-transform:uppercase;
-color:#fff;
-text-align:center;
-position:relative;
-font-size:17px;
-background:rgba(0,0,0,0.6);
--webkit-transform:translatey(-100px);
--ms-transform:translatey(-100px);
-transform:translatey(-100px);
--webkit-transition:all .2s ease-in-out;
-transition:all .2s ease-in-out;
-padding:10px;
-}
+    .hovereffect h2 {
+    text-transform:uppercase;
+    color:#fff;
+    text-align:center;
+    position:relative;
+    font-size:17px;
+    background:rgba(0,0,0,0.6);
+    -webkit-transform:translatey(-100px);
+    -ms-transform:translatey(-100px);
+    transform:translatey(-100px);
+    -webkit-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    padding:10px;
+    }
 
-.hovereffect a.info {
-text-decoration:none;
-display:inline-block;
-text-transform:uppercase;
-color:#fff;
-border:1px solid #fff;
-background-color:transparent;
-opacity:0;
-filter:alpha(opacity=0);
--webkit-transition:all .2s ease-in-out;
-transition:box-shadow .2s ease-in-out;
-margin:50px 0 0;
-padding:7px 14px;
-}
+    .hovereffect a.info {
+    text-decoration:none;
+    display:inline-block;
+    text-transform:uppercase;
+    color:#fff;
+    border:1px solid #fff;
+    background-color:transparent;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transition:all .2s ease-in-out;
+    transition:box-shadow .2s ease-in-out;
+    margin:50px 0 0;
+    padding:7px 14px;
+    }
 
-.hovereffect a.info:hover {
-box-shadow:0 0 5px #fff;
-}
+    .hovereffect a.info:hover {
+    box-shadow:0 0 5px #fff;
+    }
 
-.hovereffect:hover img {
--ms-transform:scale(1.2);
--webkit-transform:scale(1.2);
-transform:scale(1.2);
-}
+    .hovereffect:hover img {
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+    }
 
-.hovereffect:hover .overlay {
-opacity:1;
-filter:alpha(opacity=100);
-}
+    .hovereffect:hover .overlay {
+    opacity:1;
+    filter:alpha(opacity=100);
+    }
 
-.hovereffect:hover h2,.hovereffect:hover a.info {
-opacity:1;
-filter:alpha(opacity=100);
--ms-transform:translatey(0);
--webkit-transform:translatey(0);
-transform:translatey(0);
-}
+    .hovereffect:hover h2,.hovereffect:hover a.info {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -ms-transform:translatey(0);
+    -webkit-transform:translatey(0);
+    transform:translatey(0);
+    }
 
-.hovereffect:hover a.info {
--webkit-transition-delay:.2s;
-transition-delay:.2s;
-}
+    .hovereffect:hover a.info {
+    -webkit-transition-delay:.2s;
+    transition-delay:.2s;
+    }
    
    @media(max-width:1199px){  
        .hovereffect a.info{margin: 30px 0;}
@@ -257,6 +268,27 @@ transition-delay:.2s;
         .hovereffect h2{font-size: 14px; padding: 5px;margin-top: 10px;}
         .hovereffect a.info{margin: 5px 0;font-size: 12px;}
     }
+    .employment-title{
+        color:white;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .employment-sub-title{
+        color:#8F8F8F;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .employment-description{
+        color: #F8F8F8;
+    }
+    .employment-description-list{
+        
+    }
+    .employment-description-list li{
+        color: #F8F8F8;
+        font-size: 18px;
+    }
+    
 
     
 </style>
@@ -563,6 +595,7 @@ transition-delay:.2s;
         .pad5{padding: 5px;}
         .mike-desc{color: white; text-align: left; padding: 10px;}
         @media(max-width:767px){.col-mike{margin-bottom: 40px;}}
+        .reference h3{margin-top: 0; margin-bottom: 0; color: #f8f8f8;}
     </style>
     
 
@@ -571,7 +604,7 @@ transition-delay:.2s;
     <div class="biography">
         
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad5">
-        <h4 class="white">I am a Software Developer and a Full Stack Web Developer looking for work in the Seattle Area (Lynnwood). I am a Computer Science student graduated from University of Missouri-Columbia. I enjoy programming, designing, and experimenting with new things. Flexible, friendly, and look forward to developing with a fun, hard-working team!</h4>
+        <h4 class="white no-margin">I am a Software Developer and a Full Stack Web Developer looking for work in the Seattle Area (Lynnwood). I am a Computer Science student graduated from University of Missouri-Columbia. I enjoy programming, designing, and experimenting with new things. Flexible, friendly, and look forward to developing with a fun, hard-working team!</h4>
         </div>
         
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad5 col-mike">
@@ -619,139 +652,516 @@ transition-delay:.2s;
                     </div>
                 </div>
             </div>   
-       
+            
         
-        
-        
-<!--
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                <div class="overlay">
-                    <h2></h2>
-                    <p> 
-                       Running in the park as the sun sets. I am a Vegetarian, running 8 years strong now!
-                    </p> 
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                <div class="overlay">
-                    <h2></h2>
-                    <p> 
-                     Building 
-                    </p> 
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                <div class="overlay">
-                    <h2>Nice Guy</h2>
-                    <p> 
-                       I code almost every single day. My Passion is creating. When I see tools that I create bring joy and comfort to people it makes me want to go further than ever before.
-                    </p> 
-                </div>
-            </div>
-        </div>
--->
-        
-<!--
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                    <div class="overlay">
-                        <h2>Passion</h2>
-                        <p> 
-                           I code almost every single day. My Passion is creating. When I see tools that I create bring joy and comfort to people it makes me want to go further than ever before.
-                        </p> 
-                    </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                    <div class="overlay">
-                        <h2>Dedication</h2>
-                        <p> 
-                           I am dedicated to what I do. The projects I receive in the workplace I make sure get done, even if I do need to put in the extra hours. Whatever the task is, I always give it my 100%.
-                        </p> 
-                    </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 minHeightCol">
-            <div class="hovereffect2">
-                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
-                    <div class="overlay">
-                        <h2>Determination</h2>
-                        <p> 
-                           No matter what the task is, I won't stop until it gets done! Hard work and determination is enables me to never stop, to never give up!
-                        </p> 
-                    </div>
-            </div>
-        </div>
--->
-        
-<!--
-        <div class="col-md-8 col-xs-12">
-            <h4 class="white">I am a Software Developer and a Full Stack Web Developer looking for work in the Seattle Area (Lynnwood). I am a Computer Science student enrolled at the University of Missouri-Columbia. I enjoy programming, designing, and experimenting with new things. Flexible, friendly, and look forward to developing with a fun, hard-working team!</h4>
-            
-            
-            
-            
-            
-            
-            <div class="reveal-container">
-                <div class="pre-reveal"><h2>Passion</h2></div>
-                <div class="post-reveal">My Passion is creating. When I see tools that I create bring joy and comfort to people it makes me want to go further than ever before! Passion is what fuels my fire to create that which has never been created before!</div>
-            </div>
-            <div class="reveal-container">
-                <div class="pre-reveal"><h2>Dedication</h2></div>
-                <div class="post-reveal">The world is full of mysterious, just waiting to be uncovered. With dedication, I wish to achieve the unachievable and prove my worth to those around me.</div>
-            </div>
-            <div class="reveal-container">
-                <div class="pre-reveal"><h2>Determination</h2></div>
-                <div class="post-reveal">No matter what the task is, I won't stop until it gets done! Hard work and determination is enables me to never stop, to never give up!</div>
-            </div>
-        </div>
-        <div class="col-md-4 col-xs-12"><img class="img-responsive" src="images/me1.jpg" alt="mike"></div>
--->
+
 
         
     </div>
     
+    
+    
+    
     <div class="employment" style="display:none;">
-        <h1>Employment History Here!</h1>
+        <h1 class="employment-title">MBS TextBook Exchange Inc.</h1><h3 class="employment-sub-title">Insight Web Developer July 2016 | Present</h3>
+        <img class="img-responsive" src="images/mbs.jpg" alt="mbs">
+        <h3 class="employment-description">Job Description:</h3>
+        <ul class="employment-description-list">
+            <li>-Responsible for independently Developing/Designing University Bookstore Websites from the ground up within an Internal Content Management System.</li>
+            <li>-Maintain Multiple Live Websites and provide excellent and proficient Client Services.</li>
+            <li>-Lead the company forward to pursue Responsive and Modern Web Designs.</li>
+        </ul>
+        
+        <hr>
+        
+        <h1 class="employment-title">Cellairis</h1><h3 class="employment-sub-title">Sales Representative / Phone Repair September 2012 | July 2013</h3>
+        <img class="img-responsive" src="images/cellairis.jpg" alt="mbs">
+        <h3 class="employment-description">Job Description:</h3>
+        <ul class="employment-description-list">
+            <li>-Evaluated new technologies, equipment, vendors and product marketability</li> 
+            <li>-Earned a reputation as a valuable and cooperative coworker by: being fair, honest, and willing to help others when needed; effectively resolving conflicts at appropriate times; and assisting new managers and other staff to become familiar with policy and operations</li> 
+            <li>-Maintained and encouraged customer loyalty through the courteous and efficient resolution of disputes, complaints, and discrepancies</li>
+        </ul>
+        
+        
     </div>
     
     <div class="references" style="display:none;">
-        <h1>References go Here.</h1>
+        <div class="reference">
+            <h3>Web Design at MBS</h3>
+            <h3>Patrick Davis/Kent Huelett</h3>
+            <h3>(573) 445-2243</h3>
+        </div>
+
+        <hr>
+        
+         <div class="reference">
+            <h3>Technical Experience at SCC</h3>
+            <h3>Wayne Bloss</h3>
+            <h3>(636) 922-8000</h3>
+        </div>
     </div>
         
 </div>  
     
 <!-- Education Container -->
 <div class="container container-items" id="container-education" style="display:none;">
+    <style>
+        .gold{color:gold;}
+        .universities>*{padding: 5px;}
+        .universities>*.school-content{padding: 0 5px;}
+        .school-content{color: #f8f8f8;}
+        .schoolLink{color:white;}
+        .schoolLink:hover{color:white;}
+        .link-mizzou{color:gold;}
+        .link-mizzou:hover{color:gold;}
+        .highlights{font}
+        .school-highlights{}
+        .school-highlights li{font-size: 18px;}
+        .school img{opacity: 0.6; cursor: pointer; transition: opacity 0.5s;}
+        .school img:hover{opacity: 1.0;}
+        .universities .active img{opacity: 1.0}
+        
+    </style>
+    <div class="universities">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 active school" id="mizzou"><img class="img-responsive" src="images/schools/mizzou.jpg" alt="mizzou"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 school" id="lindenwood"><img class="img-responsive" src="images/schools/lindenwood.jpg" alt="lindenwood"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 school" id="scc"><img class="img-responsive" src="images/schools/scc.jpg" alt="scc"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 school" id="fzn"><img class="img-responsive" src="images/schools/fzn.jpg" alt="fzn"></div>
+
+        <!-- Mizzou -->
+        <div id="mizzouContent" class="school-content col-xs-12"> 
+            <h2><a href="http://missouri.edu/" target="_blank" class="schoolLink">University of Missouri - Columbia</a></h2> 
+            <h4 class="gold">Bachelor of Computer Science with a Minor in Mathematics</h4>
+            <h4>GPA: 3.74/4.00 | <a href="http://registrar.missouri.edu/grades-calculators/grading-system.php" target="_blank" class="link-mizzou">Grading Scale Here</a></h4> 
+            <h4>Overview: My Time spent at Mizzou was the most impactful education I have recieved for the Computer Science Field. Mizzou taught me the ins-and-outs of what goes into ideal, efficient programming development. I have learned the important things that go into the development and construction of good programming. Most importantly, I learned how to collaborated with others in my field.</h4> 
+
+            <img class="img-responsive" src="images/schools/banner_mizzou.jpg" alt="mizzou"> 
+
+            <h3 class="highlights">Highlights:</h3> 
+            <ul class="school-highlights"> 
+                <li>-Intensive Algorithm Design</li> 
+                <li>-PostgreSQL servers and the PHP/SQL language.</li> 
+                <li>-PHP, Html5, SQL, JavaScript, jQuery, and the Laravel Framework</li> 
+                <li>-Visual Applications</li> 
+                <li>-GitHub on many Assignments and Team Projects</li> 
+                <li>-Collaborated with Groups to Create, Document, and Implement Multiple Applications</li> 
+                <li>-Developed Countless C Programs that Manipulate Data, Files, Bits, and more via pointers, arrays, structures, etc.</li> 
+                <li>-Functional Programming (Haskell)</li> 
+                <li>-Computer Graphic (OpenGL)</li> 
+            </ul> 
+        </div> 
+        
+        <!-- Lindenwood -->
+        <div id="lindenwoodContent" class="school-content col-xs-12" style="display:none;"> 
+            <h2><a href="http://missouri.edu/" target="_blank" class="schoolLink">Lindenwood University</a></h2> 
+            <h4 class="gold">Past Transferee</h4>
+            <h4>GPA: 4.0/4.00</h4> 
+            <h4>Overview: Though my time at Lindenwood was breif, I still had the chance to learn very important skills for the real world. I broadened my knowledge on the different teachs and approaches to programming languages.</h4> 
+
+            <img class="img-responsive" src="images/schools/banner_lindenwood.jpg" alt="lindenwood"> 
+
+            <h3 class="highlights">Highlights:</h3> 
+            <ul class="school-highlights"> 
+                <li>-High Level Mathimatics</li> 
+                <li>-File Manipulation with C++</li> 
+                <li>-Several English Courses - Up to date articles on Current Tech of the World</li> 
+                <li>-Close Team Co-Operations</li>  
+            </ul> 
+        </div> 
+        
+        
+        <!-- SCC -->
+        <div id="sccContent" class="school-content col-xs-12" style="display:none;"> 
+            <h2><a href="https://www.stchas.edu/" target="_blank" class="schoolLink">St. Charles Community College</a></h2> 
+            <h4 class="gold">Associates of Arts Degree</h4>
+            <h4>GPA: 4.0/4.00</h4> 
+            <h4>Overview: St. Charles Community College was my first Computer Science Intensive School. I took my first programming class here (Java) and fell in love with programming as a whole. It is what sparked my passion for CS. While here, I also gained much experience with how computers operate and work.</h4> 
+
+            <img class="img-responsive" src="images/schools/banner_scc.jpg" alt="scc"> 
+
+            <h3 class="highlights">Highlights:</h3> 
+            <ul class="school-highlights"> 
+                <li>-Developed High Quality Computer Skills/Troubleshooting Skills.</li> 
+                <li>-Proficient in computer repair, maintenance, programming, and troubleshooting (A+ Maintenence Courses)</li> 
+                <li>-Gained Windows Server Experience</li> 
+                <li>-Courses on various Operating Systems and their ins-and-outs</li> 
+                <li>-Developed Skills with Team Web Design and Development</li> 
+                <li>-Built Several Java Applications</li> 
+                <li>-Obtained Associates of Arts Degree with Highest Honors</li>
+            </ul> 
+            
+            
+        </div> 
+        
+        <!-- FZN -->
+        <div id="fznContent" class="school-content col-xs-12" style="display:none;"> 
+            <h2><a href="http://nhs.fz.k12.mo.us/pages/FZ_NHS" target="_blank" class="schoolLink">Fort Zumwalt North High</a></h2> 
+            <h4 class="gold">High School Diploma</h4>
+            <h4>GPA: 4.0/4.00</h4> 
+            <h4>Overview: Fort Zumwalt North High School was where I first learned how important academics are. Each field relates and overlaps with others. Having the chance, I took many science courses that created a better understanding on how things work (technologically wise). Though I took regirous courses, I always was able to kick butt and take names!</h4> 
+
+            <img class="img-responsive" src="images/schools/banner_fzn.jpg" alt="fzn"> 
+
+            <h3 class="highlights">Highlights:</h3> 
+            <ul class="school-highlights"> 
+                <li>-Took Many College-Leveled Science Courses (Physics, Chemistry, Mathmatics)</li> 
+                <li>-Courses on various Operating Systems and their ins-and-outs</li> 
+                <li>-Created many PowerPoint Presentations, as well as Videos for Project Demonstrations.</li> 
+                <li>-Created some Animations (Adobe Flash)</li> 
+                <li>-Letters of Recommendation from Science Professors</li> 
+                <li>-Graduated with Highest Honors</li> 
+                <li>-Graduated in the Top <strong>1%</strong> of my class</li>
+            </ul> 
+            
+            
+        </div> 
+        
+    </div>
+
     
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 universities"><img class="img-responsive mizzouPopup_open" src="https://dummyimage.com/750x500/51b1e8/fff" alt="dummy"></div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 universities"><img class="img-responsive lindenwoodPopup_open" src="https://dummyimage.com/750x500/51b1e8/fff" alt="dummy"></div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 universities"><img class="img-responsive sccPopup_open" src="https://dummyimage.com/750x500/51b1e8/fff" alt="dummy"></div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 universities"><img class="img-responsive fznPopup_open" src="https://dummyimage.com/750x500/51b1e8/fff" alt="dummy"></div>
+    <style>
+        .courses>*{padding: 5px;}
+        .courses>*.school-content{padding: 0 5px;}
+        .course-content{color: #f8f8f8;}
+        .subject img{opacity: 0.6; cursor: pointer; transition: opacity 0.5s;}
+        .subject img:hover{opacity: 1.0;}
+        .subject.active img{opacity: 1.0}
+        
+        .course-content>h2{color:white;}
+        .courseName{font-size: 21px; color:#f8f8f8;}
+        .courseNumber{font-size: 18px; color:#f8f8f8;}
+        .courseMetaData{color:#D0D0D0;}
+        .courseDescription{font-size: 16px; color:#f8f8f8;}
+        
+        #sliderButtons{margin: auto;text-align: center;}
+        #sliderButtons .btn{margin-bottom: 10px;}
+    </style>
+    
+    
     
     <div class="courses" style="display:none;">
-        <h1>Math</h1>
-        <p>This is a course about Math. You do a lot of math in this course... Lol.</p>
-        <hr>
-        <h1>Science</h1>
-        <p>This is a course about Science. You do a lot of science in this course... Lol.</p>
-        <hr>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 subject active" id="programming"><img class="img-responsive" src="images/courses/code.jpg" alt="code"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 subject" id="math"><img class="img-responsive" src="images/courses/math.jpg" alt="math"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 subject" id="os"><img class="img-responsive" src="images/courses/os.jpg" alt="os"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 subject" id="repair"><img class="img-responsive" src="images/courses/repair.jpg" alt="repair"></div>
+        <br>
+        
+        <!-- Programming -->
+        <div class="course-content col-xs-12" id="programmingCourses">
+            <h2>Core Programming Courses</h2>
+            <div class="course">
+                <div class="courseName">Software Engineering</div>
+                <div class="courseNumber">Computer Science CS4610 <span class="courseMetaData"> | Spring 2017 | Ye Duan | Mizzou</span></div>
+                <div class="courseDescription">Learned the processes that go into Application Development. Gained great experience in Requirements Analysis, Documentation, and team work.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Object Oriented Design</div>
+                <div class="courseNumber">Computer Science CS4430 <span class="courseMetaData"> | Spring 2017 | Dale Mussuer | Mizzou</span></div>
+                <div class="courseDescription">Java Object Oriented Development and Design. Used NetBeans and JavaFX to develop user friendly interface applications. Understood key differences that go into different OO languages.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Object Oriented Programming - Intermediate</div>
+                <div class="courseNumber">Computer Science CS3330 <span class="courseMetaData"> | Spring 2015 | Dale Mussuer | Mizzou</span></div>
+                <div class="courseDescription">Java Application Development. Used NetBeans and JavaFX to develop user friendly interface applications.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Database</div>
+                <div class="courseNumber">Computer Science CS3380 <span class="courseMetaData"> | Spring 2015 | Kleric | Mizzou</span></div>
+                <div class="courseDescription">Discussed and Developed algorithms for efficient, effective programming.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Computer Graphics</div>
+                <div class="courseNumber">Computer Science CS4430 <span class="courseMetaData"> | Spring 2015 | Dale Mussuer | Mizzou</span></div>
+                <div class="courseDescription">Object Manipulation. Used OpenGL and Unity to create, display, and interact with 3d objects.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Web Development</div>
+                <div class="courseNumber">Computer Science CS2830 <span class="courseMetaData"> | Fall 2015 | Justin Schuelar | Mizzou</span></div>
+                <div class="courseDescription">Created Multiple Web Applications that utilized HTML5, CS3, Javascripting, JQuery, and Ajax. Also worked with Site hosting.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Assembly Language</div>
+                <div class="courseNumber">Computer Science CS3280 <span class="courseMetaData"> | Fall 2015 | Michael Yursky | Mizzou</span></div>
+                <div class="courseDescription">Programmed for the Motorola MC68HC11 micro-controller. Learned about processor architecture and byte manipulation.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">C Programming</div>
+                <div class="courseNumber">Computer Science CS2050 <span class="courseMetaData">| Fall 2014 | Joe Guilliams | Mizzou</span></div>
+                <div class="courseDescription">Developed Programs in the C Language. Discussed algorithms and pointer math..</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">C++ - Intermediate</div>
+                <div class="courseNumber">Computer Science CCSC 24400 <span class="courseMetaData">| Spring 2014 | Vandyke | Lindenwood</span></div>
+                <div class="courseDescription">Developed Many applications that would Manipulate data and files. Learned C++ syntax and structures.</div>
+            </div>
+            <hr>
+         
+        </div>
+
+        <!-- OS -->
+        <div class="course-content col-xs-12" id="osCourses" style="display:none;">
+            <h2>Operating Systems</h2>
+            <div class="course">
+                <div class="courseName">Operating Systems</div>
+                <div class="courseNumber">Computer Science CS 4520 <span class="courseMetaData"> | Spring 2016 | Grant Scott | Mizzou</span></div>
+                <div class="courseDescription">Created Virtual Machines to Which we created programs and tracked system calls. We used Linux - Mint, and created virtual cpus to demonstrate threading. Also created a File System.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Windows Desktop Op Sys</div>
+                <div class="courseNumber">Computer Science CCPC 125 <span class="courseMetaData"> | Fall 2013 | SCC</span></div>
+                <div class="courseDescription">Created Virtual Machines to Which we went through the ins-and-outs of a variety of Operating Systems. These include Windows Server 2008, Windows XP-8.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Intro to Data Processing</div>
+                <div class="courseNumber">Computer Science CCPT 115 <span class="courseMetaData"> | Spring 2013 | Rex | SCC</span></div>
+                <div class="courseDescription">Discussed Basics of how an OS processing data.</div>
+            </div>
+        </div>
+        
+
+        <!-- Math -->
+        <div class="course-content col-xs-12" id="mathCourses" style="display:none;">
+            <h2>Algorithms/Mathmatics</h2>
+            <div class="course">
+                <div class="courseName">Algorithm Design - Intermediate</div>
+                <div class="courseNumber">Computer Science CS3050 <span class="courseMetaData"> | Spring 2015 | Chadra | Mizzou</span></div>
+                <div class="courseDescription">Discussed and Developed algorithms for efficient, effective programming.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Algorithm Design - Advanced</div>
+                <div class="courseNumber">Computer Science CS4050 <span class="courseMetaData"> | Spring 2016 | Saab | Mizzou</span></div>
+                <div class="courseDescription">Thoroughly dove into different algorithms and best way to improve run times. Compared and Contrasted Algorithm techniques for most effifient use of time.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Differential Equations</div>
+                <div class="courseNumber">Math 4100 <span class="courseMetaData"> | Fall 2015 | Gonzellas | Mizzou</span></div>
+                <div class="courseDescription">Traditional introductory course in ordinary differential equations. Includes 1st and 2nd order linear differential equations with numerous applications; Laplace transforms; power series solutions; numerical methods, linear systems. </div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Statistics</div>
+                <div class="courseNumber">Math 4710 <span class="courseMetaData"> | Spring 2015 | Mizzou</span></div>
+                <div class="courseDescription">Introduction to theory of probability and statistics using concepts and methods of calculus.</div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Discrete Mathematical Structures</div>
+                <div class="courseNumber">Math 2320 <span class="courseMetaData"> | Fall 2014 | Son | Mizzou</span></div>
+                <div class="courseDescription">Sets, functions, logic, relations, induction, recursion, counting techniques, graphs, trees, algorithms. Math Reasoning Proficiency course. </div>
+            </div>
+            <hr>
+            <div class="course">
+                <div class="courseName">Calculus 3</div>
+                <div class="courseNumber">Math 2300 <span class="courseMetaData"> | Fall 2014 | Mizzou</span></div>
+                <div class="courseDescription">Vectors, solid analytic geometry, calculus of several variables. Math Reasoning Proficiency course.</div>
+            </div>
+        </div>
+        
+        <!-- Repair -->
+        <div class="course-content col-xs-12" id="repairCourses" style="display:none;">
+            <h2>Computer Repair Courses</h2>
+            <div class="course">
+                <div class="courseName">Computer Repair and Maintenence</div>
+                <div class="courseNumber">Computer Science CCPC 205 <span class="courseMetaData"> | Fall 2013 | Wayne Bloss | SCC</span></div>
+                <div class="courseDescription">Thoroughly dove into each component of a desktop. Every week, we would take out every single component and rebuild a fully functional desktop. We trouble-shooted, both physically and virtually. Discussed beep codes, debugging, and steps to go throguh to correct errors.</div>
+            </div>
+        </div>
+        
+        
+        
     </div>
     
     <div class="pl" style="display:none;">
-        <h1>Put Slider Here...</h1>
+        <link rel="stylesheet" type="text/css" href="css/sliderJS.css" />
+        <script type="text/javascript" src="js/sliderReload.js"></script>
+        <div id="sliderButtons">
+            <button type="button" id="sliderButton1" class="btn btn-primary sliderButton">Programming Languages</button>
+            <button type="button" id="sliderButton2" class="btn btn-primary sliderButton">Applications</button>
+        </div>
+        
+        <div id="sliderContent">
+            <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1140px;height:450px;overflow:hidden;visibility:hidden;">
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                    <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                </div>
+                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1140px;height:450px;overflow:hidden;">
+                        <!--Slide 1 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/java.jpg" />
+                            <div style="position: absolute; top: 80px; left: 550px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                                Knowledge in object creation and manipulation, theading, structures, hash maps, and much more. Has worked with JavaFX as well. 
+                            </div>
+                        </div>
+
+                        <!--Slide 2 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/javascript.jpg" />
+                            <div style="position: absolute; top: 280px; left: 150px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                                Object and file manipulation, effects and transitions. 
+                            </div>
+                        </div>
+
+                        <!--Slide 3 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/c.jpg" />
+                            <div style="position: absolute; top: 110px; left: 150px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                               Thoroughly worked with sorting and searching algorithms including binary trees and merge sorts. Knows how to allocate memory where needed and create header/make files. 
+                            </div>
+                        </div>
+                        <!--Slide 4 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/cplusplus.jpg" />
+                            <div style="position: absolute; top: 110px; left: 150px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                               Experience with file input and output. Knowledge of function/structure creation. 
+                            </div>
+                        </div>
+
+                        <!--Slide 5 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/php.jpg" />
+                            <div style="position: absolute; top: 290px; left: 220px; width: 740px; height: 120px; font-size: 28px; color: #ffffff; line-height: 36px;">
+                               Experienced with creating log-in systems using PHP and sessions. Have made small site commenting systems. Knows how to manipulate data and can do basic algorithms retrieving data from databases. 
+                            </div>
+                        </div>
+                        <!--Slide 6 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/postgres.jpg" />
+                            <div style="position: absolute; top: 210px; left: 550px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                               Ability to create databases. Knowledge of schema and table construction and how to write queries, as well as indexing.
+                            </div>
+                        </div>
+
+                        <!--Slide 7 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/html5.jpg" />
+                         <div style="position: absolute; top: 190px; left: 150px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                               Experience with site design and creation. Knows how to link libraries and use classes/id’s correctly. 
+                            </div>
+                        </div>
+                        <!--Slide 8 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/css3.jpg" />
+                            <div style="position: absolute; top: 190px; left: 150px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                               Much knowledge in site design, styling, animations, and transitions. 
+                            </div>
+                        </div>
+
+                        <!--Slide 9 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/ajax.jpg" />
+                            <div style="position: absolute; top: 90px; left: 220px; width: 740px; height: 120px; font-size: 28px; color: #ffffff; line-height: 36px;">
+                               Knowledge in how to use ajax calls to retrieve data from particular file formats (http, xml, json) and use that data to populate objects. 
+                            </div>
+                        </div>
+
+                        <!--Slide 10 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/jquery.jpg" />
+                            <div style="position: absolute; top: 210px; left: 550px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+            Can Create on-load functions and extract/manipulate DOM objects.
+                            </div>
+                        </div>
+
+                        <!--Slide 11 -->
+                        <div data-p="225.00" style="display: none;">
+                            <img data-u="image" src="images/sliderPics/microController.jpg" />
+                            <div style="position: absolute; top: 80px; left: 550px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+            Worked with Assembly Language for the Motorola MC68HC11 microcontroller. Experience with register/stack manipulation as well as I/O. 
+                            </div>
+                        </div> 
+                </div>
+                <!-- Bullet Navigator -->
+                <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+                    <!-- bullet navigator item prototype -->
+                    <div data-u="prototype" style="width:16px;height:16px;"></div>
+                </div>
+                <!-- Arrow Navigator -->
+                <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+                <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+            </div>
+            
+            <!-- Slide Container -->
+            <div id='jssor_2' style='position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1140px; height: 450px; overflow: hidden; visibility: hidden; display:none;'>
+                <!-- Loading Screen -->
+                <div data-u='loading' style='position: absolute; top: 0px; left: 0px;'>
+                    <div style='filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;'></div>
+                    <div style='position:absolute;display:block;background:url("images/loading.gif") no-repeat center center;top:0px;left:0px;width:100%;height:100%;'></div>
+                </div>
+                <!-- ************* Start Slides ************* -->
+                <div data-u='slides' style='cursor: default; position: relative; top: 0px; left: 0px; width: 1140px; height: 450px; overflow: hidden;'>
+                    <!--Slide 1 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/laravel.jpg' />
+                        <div style='position: absolute; top: 110px; left: 150px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;'> Have worked with a Laravel PHP framework. Knows how to route, create models, and views as part of the Model View Controller format. </div>
+                    </div>
+                    <!--Slide 2 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/virtualBox.jpg' />
+                        <div style='position: absolute; top: 320px; left: 550px; width: 625px; height: 120px; font-size: 26px; color: #ffffff; line-height: 30px;'> Experienced with creating and managing virtual machines. Created and worked within windows 7+ and server virtual machines. </div>
+                    </div>
+                    <!--Slide 3 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/vmware.jpg' />
+                        <div style='position: absolute; top: 310px; left: 400px; width: 620px; height: 120px; font-size: 28px; color: #ffffff; line-height: 36px;'> Created and managed virtual machines using VMware. Much experience with the Linux Mint OS within VMware. </div>
+                    </div>
+                    <!--Slide 4 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/office.jpg' />
+                        <div style='position: absolute; top: 370px; left: 250px; width: 760px; height: 120px; font-size: 28px; color: #000000; line-height: 26px;'> Have worked with about every major Office Application. Word, Excel, PowerPoint are my strong suits. </div>
+                    </div>
+                    <!--Slide 5 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/vegasPro.jpg' />
+                        <div style='position: absolute; top: 250px; left: 230px; width: 700px; height: 120px; font-size: 32px; color: #ffffff; line-height: 36px;'> Much experience with video manipulation, creation, and effects using Sony Vegas Pro. </div>
+                    </div>
+                    <!--Slide 6 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/ps.jpg' />
+                        <div style='position: absolute; top: 170px; left: 590px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 36px;'> Experienced with image creation and manipulation within Photoshop. Knows difference/understands different file types and how to convert between them. </div>
+                    </div>
+                    <!--Slide 7 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/netbeans.jpg' />
+                        <div style='position: absolute; top: 270px; left: 230px; width: 780px; height: 120px; font-size: 32px; color: #000000; line-height: 36px;'> Created many applications/projects using the NetBeans interface. Can manage/navigate through multiple projects, as well as link resources where needed. </div>
+                    </div>
+                    <!--Slide 8 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/github.jpg' />
+                        <div style='position: absolute; top: 270px; left: 400px; width: 620px; height: 120px; font-size: 32px; color: #000000; line-height: 36px;'> Have worked in GitHub for many group projects, as well as personal projects. Knowledge in branch creation and version control. </div>
+                    </div>
+                    <!--Slide 9 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/sourcetree.jpg' />
+                        <div style='position: absolute; top: 120px; left: 160px; width: 420px; height: 120px; font-size: 32px; color: #ffffff; line-height: 36px;'> Used Source Tree in larger scaled projects to keep GitHub projects clean and efficient. </div>
+                    </div>
+                    <!--Slide 10 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/azure.jpg' />
+                        <div style='position: absolute; top: 250px; left: 280px; width: 720px; height: 120px; font-size: 28px; color: #000000; line-height: 36px;'> Have worked with this Platform as a Service many times. Often hosts site being deployed from a GitHub Repository. Also used Azure to create and manage Virtual Machines. </div>
+                    </div>
+                    <!--Slide 11 -->
+                    <div data-p='225.00' style='display: none;'> <img data-u='image' src='images/sliderPics/openshift.jpg' />
+                        <div style='position: absolute; top: 120px; left: 160px; width: 420px; height: 120px; font-size: 28px; color: #ffffff; line-height: 36px;'> Has used OpenShift for many projects. Hosted many PHP applications, linked with PostGreSQL servers on OpenShift. Knows how to SSH into hosted projects and manage Databases within them. </div>
+                    </div>
+                </div>
+                <!-- ************* End Slides ************* -->
+                <!-- Bullet Navigator -->
+                <div data-u='navigator' class='jssorb05' style='bottom:16px;right:16px;' data-autocenter='1'>
+                    <!-- bullet navigator item prototype -->
+                    <div data-u='prototype' style='width:16px;height:16px;'></div>
+                </div>
+                <!-- Arrow Navigator --><span data-u='arrowleft' class='jssora22l' style='top:0px;left:12px;width:40px;height:58px;' data-autocenter='2'></span> <span data-u='arrowright' class='jssora22r' style='top:0px;right:32px;width:40px;height:58px;' data-autocenter='2'></span> 
+            </div>
+            
+            
+        </div>   
+        
+        
     </div>
 </div>
 
@@ -1068,7 +1478,8 @@ transition-delay:.2s;
         <h3>Features</h3>
         <ul> 
             <li>-Ultilizes Java's Extensive libraries on visual Effects</li> 
-            <li>-Made using JavaFX</li> <li>Personal Song Selection</li> 
+            <li>-Made using JavaFX</li> 
+            <li>-Personal Song Selection</li> 
             <li>-HighScores</li> 
             <li>-Multiple Levels</li> <li>Can Pause Mid-Session</li> 
             <li>-Demonstrates Threading via enemies!</li> 

@@ -160,7 +160,103 @@ $(document).ready(function(){
         }                   
     }); 
     
+    $('.school').click(function(){
+        switch($(this).attr('id')){
+            case "mizzou": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.school').removeClass('active');
+                    $(this).addClass('active');
+                    $('.school-content').fadeOut(200);
+                    setTimeout(function(){$('#mizzouContent').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+            case "lindenwood": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.school').removeClass('active');
+                    $(this).addClass('active');
+                    $('.school-content').fadeOut(200);
+                    setTimeout(function(){$('#lindenwoodContent').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+            case "scc": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.school').removeClass('active');
+                    $(this).addClass('active');
+                    $('.school-content').fadeOut(200);
+                    setTimeout(function(){$('#sccContent').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+            case "fzn": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.school').removeClass('active');
+                    $(this).addClass('active');
+                    $('.school-content').fadeOut(200);
+                    setTimeout(function(){$('#fznContent').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+                
+                
+                
+            default:{return;}
+        }
+     }); 
     
+    $('.subject').click(function(){
+        switch($(this).attr('id')){
+            case "programming": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.subject').removeClass('active');
+                    $(this).addClass('active');
+                    $('.course-content').fadeOut(200);
+                    setTimeout(function(){$('#programmingCourses').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+            case "math": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.subject').removeClass('active');
+                    $(this).addClass('active');
+                    $('.course-content').fadeOut(200);
+                    setTimeout(function(){$('#mathCourses').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+            case "os": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.subject').removeClass('active');
+                    $(this).addClass('active');
+                    $('.course-content').fadeOut(200);
+                    setTimeout(function(){$('#osCourses').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+            case "repair": 
+                if($(this).hasClass('active')){return;}
+                else{
+                    $('.subject').removeClass('active');
+                    $(this).addClass('active');
+                    $('.course-content').fadeOut(200);
+                    setTimeout(function(){$('#repairCourses').fadeIn(200);}, 200);   
+                }   
+                break;
+                
+                
+                
+                
+            default:{return;}
+        }                        
+    }); 
     
     //*******Item PopUp******//
     $('.item-popup-container').popup({
