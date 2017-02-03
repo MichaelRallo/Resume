@@ -1904,16 +1904,16 @@
 
 
 <script>
-var myVar;
+$('#loader').fadeIn(500);
 
 function myFunction() {
-    $('#loader').fadeIn(500);
+    
     var readyStateCheckInterval = setInterval(function() {
         if (document.readyState === "complete") {
             clearInterval(readyStateCheckInterval);
             showPage();
         }
-    }, 50);
+    }, 10);
 }
 
 function showPage() {
