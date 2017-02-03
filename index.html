@@ -1852,7 +1852,7 @@
   z-index: 1000;
   width: 150px;
   height: 150px;
-  margin: -75px 0 0 -75px;
+  margin: -75px 0 0 -60px;
   border: 16px solid #f8f8f8;
   border-radius: 50%;
   border-top: 16px solid crimson;
@@ -1908,12 +1908,12 @@ var myVar;
 
 function myFunction() {
     $('#loader').fadeIn(500);
-var readyStateCheckInterval = setInterval(function() {
-    if (document.readyState === "complete") {
-        clearInterval(readyStateCheckInterval);
-        showPage();
-    }
-}, 10);
+    var readyStateCheckInterval = setInterval(function() {
+        if (document.readyState === "complete") {
+            clearInterval(readyStateCheckInterval);
+            showPage();
+        }
+    }, 50);
 }
 
 function showPage() {
