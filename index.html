@@ -240,12 +240,27 @@
 </div>
 
     
-<script>    
-    $('#container-projects img').on('load',function(){ 
-        console.log("image loaded correctly");
-        $('#loader').hide();
-        $('#pageWrapper').fadeIn(200);
-    }); 
+<script> 
+    var imageCount = $('#container-projects img').length;
+    var imagesLoaded = 0;
+    var images = [];
+    
+    var checkAll = function(){
+        console.log("Howdy");
+        imagesLoaded++;
+        if(imagesLoaded == imageCount){
+            $('#loader').hide();
+            $('#pageWrapper').fadeIn(200);  
+        }
+    }
+  
+    $('#container-projects img').each(function(i, workingImage){
+          images[i] = new Image();
+          images[i].onload = checkAll;
+          images[i].src = $(workingImage).attr('src');
+    });
+    
+    
 </script>
         
     
