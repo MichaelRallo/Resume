@@ -241,10 +241,11 @@
 
     
 <script>    
-    $(document).ready(function() {
+    $('#container-projects img').on('load',function(){ 
+        console.log("image loaded correctly");
         $('#loader').hide();
         $('#pageWrapper').fadeIn(200);
-    });    
+    }); 
 </script>
         
     
