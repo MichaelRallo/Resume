@@ -50,7 +50,7 @@ $(document).ready(function(){
             $('#sub-navigation-projects .active-sub-navigation').removeClass('active-sub-navigation');
             $(this).addClass('active-sub-navigation');
             $('#container-projects>*').fadeOut(200); 
-            setTimeout(function(){$('#container-projects>*:not("#attraction-alt")').fadeIn(200);}, 200);    
+            setTimeout(function(){$('#container-projects>*:not(".attraction-alt")').fadeIn(200);}, 200);    
         }
     });
     

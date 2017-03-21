@@ -160,7 +160,7 @@ a:hover{cursor: pointer;}
     transition: filter .3s;
 }
 
-#attraction-alt{display: none;}
+.attraction-alt{display: none;}
 
 /*Hover Effects*/
 .hovereffect {
