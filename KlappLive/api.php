@@ -8,7 +8,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 //Connect to DB
 include("secure/database.php");
 $dbconn = connectDB();            
-mysqli_select_db('klappdb');
+mysqli_select_db($dbconn, 'klappdb');
 
 //Sample Path would be: http://localhost/api.php/{$user}
 //Sample Path would be: http://localhost/api.php/{$user}/${wordID}
