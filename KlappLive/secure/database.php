@@ -11,7 +11,7 @@ function connectDB() {
       die('Could not connect: ' . mysql_error());
     }
 
-    mysql_set_charset('utf8', $dbconn);
+    mysqli_set_charset('utf8', $dbconn);
     return $dbconn;
 }
 
