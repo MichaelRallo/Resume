@@ -1,0 +1,188 @@
+/*****Font Settings*****/
+@font-face {
+font-family: 'Eras Light ITC';
+font-style: normal;
+font-weight: normal;
+src: local('Eras Light ITC'), url('../fonts/ERASLGHT.woff') format('woff');
+}
+
+*{
+    padding:0px;
+    margin: auto;
+}
+
+body{
+    background-color:#003478;
+}
+.no-padding{
+    padding: 0px;
+}
+.no-margin{
+    margin: 0px;
+}
+
+
+/*Header*/    
+#header{
+    background-color: transparent;
+}
+#header-wrapper{
+    background-color: #F3F3F3;
+}
+
+/*Right Nav*/
+#main-navigation-list{
+    float: right;
+    padding-top: 17px;
+}
+
+#main-navigation-list>li{
+    display: inline-block;
+    height: auto;
+}
+#main-navigation-list>li>a{
+    color: dimgray;
+    font-size: 21px;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Eras Light ITC;
+    font-weight: bold;
+}
+#main-navigation-list>li>a:hover{
+    text-decoration: none;
+    color: black;
+}
+#main-navigation-list li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 25px;
+  left: 0;
+  background-color: #003478;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}    
+
+#main-navigation-list li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}    
+
+/*Logo Stuff*/
+#logo-container{
+    z-index: 1;
+}
+#logo-container *{
+    display: inline;
+}
+#logo-text{
+    font-size: 21px;
+    font-family: Eras Light ITC;
+    color: black;
+}
+#logo-text:hover{
+    text-decoration: none;
+    color: dimgray;
+}
+
+@media (max-width: 600px){
+    #main-navigation-list, #navigation-list{
+        float: none;
+        text-align: center;
+        padding-top: 5px;
+        width: 100%;
+        margin:auto;
+    } 
+    #main-navigation-list>li{
+        display: block;
+    }
+    #logo-container{
+        text-align: center;
+        width: 100%;
+        margin:auto;
+    }
+}
+@media(max-width: 380px){
+    #logo-container *{
+        display: block;
+    }
+}
+
+
+/*****Practice*****/
+
+.panel *{
+
+    text-align: center;
+}
+.words-group{
+    list-style: none;
+    font-size: 18px;
+}
+.type-header{
+    font-size: 21px;
+    text-transform: capitalize;
+}
+.words-group li:nth-child(even) {
+    background-color:gray;
+}
+.words-group li:nth-child(even) {
+    background-color:#F0F0F0;
+}
+.panel-heading, .type-header{
+    cursor: pointer;
+}
+.koreanCol{
+    float:right;
+}
+.englishCol{
+    float:left;
+}
+#add-words{
+    cursor: pointer;
+}
+.selected{
+    background-color:greenyellow !important;
+}
+.words-group>li{
+    cursor: pointer;
+}
+#start-practice, #back-to-selection{
+    color: #003478;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#start-practice:hover, #back-to-selection:hover{
+    color: #c60c30;
+}
+.choice-container{
+    padding:10px;
+    min-height: 45px;
+}
+.choice{
+    width: 100%;
+    height:100%;
+    display: inline-block;
+    font-size: 32px;
+    background-color: #003478;
+    color: #F3F3F3;
+    position: relative;
+    text-align: center;
+    min-height: 20px;
+    cursor: pointer;
+}
+.choice:hover{
+    color:white;
+    background-color: #006699;
+}
+.question-container{
+    text-align: center;
+    font-size: 36px;
+}
