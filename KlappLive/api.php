@@ -40,12 +40,12 @@ switch ($method) {
 }
  
 // excecute SQL statement
-$result = mysql_query($sql, $dbconn);
+$result = mysqli_query($sql, $dbconn);
  
 // die if SQL statement failed
 if (!$result) {
   http_response_code(404);
-  die(mysqli_error());
+  die(mysqli_error($dbconn));
 }
 if ($method == 'POST') {
     echo json_encode($input);
