@@ -40,7 +40,7 @@ switch ($method) {
 }
  
 // excecute SQL statement
-$result = mysqli_query($sql, $dbconn);
+$result = mysqli_query($dbconn, $sql);
  
 // die if SQL statement failed
 if (!$result) {
