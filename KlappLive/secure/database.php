@@ -6,12 +6,23 @@ function connectDB() {
     $dbuser = 'bb5f37b7fc182f';
     $dbpass = '7febe84a';
     $dbconn = mysqli_connect($dbhost, $dbuser, $dbpass);
-    
-    if(!$dbconn){
-      die('Could not connect: ' . mysql_error());
+
+    /* check connection */
+    if (mysqli_connect_errno()) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
     }
 
-    mysqli_set_charset('utf8', $dbconn);
+    printf("Initial character set: %s\n", mysqli_character_set_name($dbconn));
+
+    /* change character set to utf8 */
+    if (!mysqli_set_charset($dbconn, "utf8")) {
+        printf("Error loading character set utf8: %s\n", mysqli_error($dbconn));
+        exit();
+    } else {
+        printf("Current character set: %s\n", mysqli_character_set_name($dbconn));
+    }
+
     return $dbconn;
 }
 
