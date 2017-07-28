@@ -6,8 +6,8 @@ function handleSignIn($dbconn){
             $username = $_SESSION['username'];
 
             //Pull User's Records to display information
-            $userInfoQuery = sprintf("SELECT * FROM userTables.user_info AS info WHERE (info.username = '%s')", $username);
-            mysql_select_db('userTables');
+            $userInfoQuery = sprintf("SELECT * FROM klappdb.user_info AS info WHERE (info.username = '%s')", $username);
+            mysql_select_db('klappdb');
             $resultUserInfo = mysql_query($userInfoQuery, $dbconn) or die ("Could Not Get User Data From Database!");;
             $userInfo = mysql_fetch_array($resultUserInfo, MYSQL_ASSOC);
             

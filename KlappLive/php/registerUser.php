@@ -14,8 +14,8 @@ function registerUser($dbconn, $username, $password) {
     }
     else{
          //See If User Already Exists
-        $checkUserQuery = sprintf("SELECT * FROM userTables.authentication AS auth WHERE (auth.username = '%s')",$username);
-        mysql_select_db('userTables');
+        $checkUserQuery = sprintf("SELECT * FROM klappdb.authentication AS auth WHERE (auth.username = '%s')",$username);
+        mysql_select_db('klappdb');
         $resultCheckUser = mysql_query($checkUserQuery, $dbconn) or die ("Could Not Check if User Exists!");
 
         $userRow = mysql_fetch_array($resultCheckUser, MYSQL_ASSOC);
@@ -30,13 +30,13 @@ function registerUser($dbconn, $username, $password) {
             $timestamp = date('Y-m-d G:i:s');
             
             //Add User To Database, Inserting Information Respectively
-            $registerUserQuery = sprintf("INSERT INTO userTables.user_info(username, registration_date) VALUES ('%s', '%s')", $username, $timestamp);
-            mysql_select_db('userTables');
+            $registerUserQuery = sprintf("INSERT INTO klappdb.user_info(username, registration_date) VALUES ('%s', '%s')", $username, $timestamp);
+            mysql_select_db('klappdb');
             $resultRegisterUser = mysql_query($registerUserQuery, $dbconn) or die ("Could Not Add User To Database!");;
             
             //Add User's Authentication Stuff to Database
-            $registerPasswordQuery = sprintf("INSERT INTO userTables.authentication(username, password_hash, salt) VALUES ('%s', '%s', '%s')", $username,$password_hash,$salt);
-            mysql_select_db('userTables');
+            $registerPasswordQuery = sprintf("INSERT INTO klappdb.authentication(username, password_hash, salt) VALUES ('%s', '%s', '%s')", $username,$password_hash,$salt);
+            mysql_select_db('klappdb');
             $resultRegisterPassword = mysql_query($registerPasswordQuery, $dbconn) or die("Could Not Add User Authication To Database!");
             
           	$_SESSION['username'] = $username;

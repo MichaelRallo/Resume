@@ -3,8 +3,8 @@
 function loginUser($dbconn, $username, $password) { 
 
     //See If User Exists
-    $checkUserQuery = sprintf("SELECT * FROM userTables.authentication AS auth WHERE (auth.username = '%s')", $username);
-    mysql_select_db('userTables');
+    $checkUserQuery = sprintf("SELECT * FROM klappdb.authentication AS auth WHERE (auth.username = '%s')", $username);
+    mysql_select_db('klappdb');
     $resultCheckUser = mysql_query($checkUserQuery, $dbconn);
     if(!$resultCheckUser ){
             die('Could not get data: ' . mysql_error());
@@ -24,8 +24,8 @@ function loginUser($dbconn, $username, $password) {
 		$password_hash = sha1($salt . $password);
 	
         
-        $checkPasswordQuery = sprintf("SELECT * FROM userTables.authentication AS auth WHERE (auth.username = '%s' AND auth.password_hash = '%s')",$username, $password_hash);
-        mysql_select_db('userTables');
+        $checkPasswordQuery = sprintf("SELECT * FROM klappdb.authentication AS auth WHERE (auth.username = '%s' AND auth.password_hash = '%s')",$username, $password_hash);
+        mysql_select_db('klappdb');
         $resultCheckPassword = mysql_query($checkPasswordQuery, $dbconn) or die("Error while Logging In.");
         if(!$resultCheckUser ){
                 die('Could not get data: ' . mysql_error());
