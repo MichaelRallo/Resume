@@ -8,7 +8,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 //Connect to DB
 include("secure/database.php");
 $dbconn = connectDB();            
-mysql_select_db('klappdb');
+mysqli_select_db('klappdb');
 
 //Sample Path would be: http://localhost/api.php/{$user}
 //Sample Path would be: http://localhost/api.php/{$user}/${wordID}
@@ -45,7 +45,7 @@ $result = mysql_query($sql, $dbconn);
 // die if SQL statement failed
 if (!$result) {
   http_response_code(404);
-  die(mysql_error());
+  die(mysqli_error());
 }
 if ($method == 'POST') {
     echo json_encode($input);
@@ -56,12 +56,12 @@ if ($method == 'DELETE') {
 // print results, insert id or affected row count
 if ($method == 'GET') {
 echo '[';
-for ($i=0;$i<mysql_num_rows($result);$i++) {
-echo ($i>0?',':'').json_encode(mysql_fetch_object($result));
+for ($i=0;$i<mysqli_num_rows($result);$i++) {
+echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
 }
 echo ']';
 } 
  
 // close mysql connection
-mysql_close($dbconn);
+mysqli_close($dbconn);
 ?>
