@@ -13,14 +13,11 @@ function connectDB() {
         exit();
     }
 
-    printf("Initial character set: %s\n", mysqli_character_set_name($dbconn));
 
     /* change character set to utf8 */
     if (!mysqli_set_charset($dbconn, "utf8")) {
         printf("Error loading character set utf8: %s\n", mysqli_error($dbconn));
         exit();
-    } else {
-        printf("Current character set: %s\n", mysqli_character_set_name($dbconn));
     }
 
     return $dbconn;
