@@ -74,7 +74,7 @@
     
         function calcAndSetCaloriesEaten(){
             if($('#caloriesPerServing').val() != "" && $('#gramsPerServing').val() != "" && $('#gramsEaten').val() != ""){
-                $('#caloriesEaten').val(($('#gramsPerServing').val() * $('#gramsEaten').val()) / $('#caloriesPerServing').val());
+                $('#caloriesEaten').val(($('#caloriesPerServing').val() * $('#gramsEaten').val()) / $('#gramsPerServing').val());
             }
             else{
                 $('#caloriesEaten').val("");
