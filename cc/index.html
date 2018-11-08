@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Calorie Counter Pro+</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="row">
+            <h1>Calorie Counter Pro+</h1>
+        </div>
+        
+        <br>
+        <!--
+        <div class="row">
+            <div class="col-sm-6 col-md-6 ">
+                <div class="form-group">
+                    <label for="foodName0">Food Name</label>
+                    <input type="text" class="form-control" id="foodName0" placeholder="Food Name">
+                </div>    
+            </div>
+        </div>
+        -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="caloriesPerServing">Calories Per Serving</label>
+                    <input type="text" class="form-control" id="caloriesPerServing" placeholder="Calories Per Serving">
+                </div>    
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="gramsPerServing">Grams per Serving</label>
+                    <input type="text" class="form-control" id="gramsPerServing" placeholder="Grams per Serving">
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="gramsEaten">Grams Eaten</label>
+                    <input type="text" class="form-control" id="gramsEaten" placeholder="Grams Eaten">
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="caloriesEaten">Calories Eaten</label>
+                    <input type="text" class="form-control" id="caloriesEaten" placeholder="Calories Eaten" disabled>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-lg-4"></div>
+        </div>
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    
+        function calcAndSetCaloriesEaten(){
+            if($('#caloriesPerServing').val() != "" && $('#gramsPerServing').val() != "" && $('#gramsEaten').val() != ""){
+                $('#caloriesEaten').val(($('#gramsPerServing').val() * $('#gramsEaten').val()) / $('#caloriesPerServing').val());
+            }
+            else{
+                $('#caloriesEaten').val("");
+            }
+        }
+        $('#caloriesPerServing').change(function(){
+            calcAndSetCaloriesEaten();
+        });
+        
+        $('#gramsPerServing').change(function(){
+            calcAndSetCaloriesEaten();
+        });
+        
+        $('#gramsEaten').change(function(){
+            calcAndSetCaloriesEaten();
+        });
+        
+        $('#caloriesPerServing').keyup(function(){
+            calcAndSetCaloriesEaten();
+        });
+        
+        $('#gramsPerServing').keyup(function(){
+            calcAndSetCaloriesEaten();
+        });
+        
+        $('#gramsEaten').keyup(function(){
+            calcAndSetCaloriesEaten();
+        });
+        
+    </script>
+</body>
+</html>
+
